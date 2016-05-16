@@ -1,0 +1,19 @@
+﻿<h1>Hellow Angular 2</h1>
+
+<div style="text-align:center">
+    <input type="text"
+           placeholder="New todo.."
+           #newtodo
+           (keyup)="add($event,newtodo)">
+
+</div>
+<table>
+    <tr *ng-for="#todo of get()">
+        <td>
+            {{todo.text}}
+        </td>
+        <td>
+            <input type="checkbox" name="vehicle" checked="{{todo.done}}">
+        </td>
+    </tr>
+</table>
